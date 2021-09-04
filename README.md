@@ -1,7 +1,7 @@
-# proyectoinformatorio2021
+# ChacoQuizz
 Proyecto final 2021
 
-ChacoQuizz
+
 
 
 Trabajo para el Informatorio 2021 Desarrollo Web.
