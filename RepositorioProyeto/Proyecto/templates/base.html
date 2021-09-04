@@ -1,0 +1,191 @@
+{% load static%}
+
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Chaco | JuegaChaco</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!--Botón Comenzar Trivia-->
+    <div class="banderac" >
+     <img src="{% static '/images/bandera.png' %}"
+     width="200"
+     height="150">
+    </div>
+
+    <div class="start_btn"><button>Comenzar</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info_title">
+            <span>Reglas de la Trivia</span>
+        </div>
+        <div class="info-list">
+            <div class="info">1. Tiene <span>tiempo</span> para contestar.</div>
+            <div class="info">2. Una vez elegida la opción, <span>no se puede modificar</span>.</div>
+            <div class="info">3. No se puede elegir una vez <span>finalizado el tiempo.</span></div>
+            <div class="info">4. Se debe selecionar 1 de los 3 niveles disponibles.</div> 
+            <div class="info">5. Preguntas sobre la cultura e historia de la Prov de chaco.</div> 
+            <div class="info">6. No se puede abandonar el juego.</div>
+            <div class="info">7. Se te dará un puntaje al finalizar.</div> 
+        </div>
+        <div class="buttons">
+            <button class="quit">Salir</button>
+            <button class="restart">Continuar</button>
+        </div>
+    </div>
+
+    <!-- dificultad Box -->
+
+    <div class="dif_box">
+        <div class="dif_title">
+            <span>Seleccionar Dificultad</span>
+        </div>
+        <div class="info-list">
+            <div class="info"></div>
+            <div class="info"><span>Facil: </span>10pts por respuesta. 20s</div>
+            <div class="info"><span>Medio: </span>20pts por respuesta. 15s</div>
+            <div class="info"><span>Avanzado: </span>30pts por respuesta. 10s</div>
+        </div>
+        <div class="botones">
+            <button class="b_fac">Facil</button>
+            <button class="b_med">Medio</button>
+            <button class="b_dif">Avanzado</button>
+        </div>
+    </div>
+
+    <!-- bloque de trivia -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Trivia Chaco</div>
+            <div class="timer">
+                <div class="time_left_txt">Tiempo</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+            <div class="option_list">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Se pone el contador de preguntas desde el JavaScript -->
+            </div>
+            <button class="next_btn">Siguiente</button>
+        </footer>
+    </div>
+
+
+
+
+
+    <!-- bloque de trivia facil-->
+    <div class="quiz_boxf">
+        <header>
+            <div class="title">Trivia Chaco</div>
+            <div class="timer">
+                <div class="time_left_txtf">Tiempo</div>
+                <div class="timer_secf">20</div>
+            </div>
+            <div class="time_linef"></div>
+        </header>
+        <section>
+            <div class="que_textf">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+            <div class="option_listf">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_quef">
+                <!-- Se pone el contador de preguntas desde el JavaScript -->
+            </div>
+            <button class="next_btnf">Siguiente</button>
+        </footer>
+    </div>
+
+
+        <!-- bloque de trivia dif-->
+    <div class="quiz_boxd">
+        <header>
+            <div class="title">Trivia Chaco</div>
+            <div class="timer">
+                <div class="time_left_txtd">Tiempo</div>
+                <div class="timer_secd">10</div>
+            </div>
+            <div class="time_lined"></div>
+        </header>
+        <section>
+            <div class="que_textd">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+            <div class="option_listd">
+                <!-- se saca la pregunta del javascript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_qued">
+                <!-- Se pone el contador de preguntas desde el JavaScript -->
+            </div>
+            <button class="next_btnd">Siguiente</button>
+        </footer>
+    </div>
+   
+   
+
+
+
+
+
+    <!-- caja de resultados -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Haz completado la trivia!</div>
+        <div class="score_text">
+            <!-- se toma el resultado del  JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Jugar de nuevo</button>
+            <button class="quit">Salir</button>
+        </div>
+    </div>
+
+
+<!-- En este archivo del java se pone las preguntas y opciones --> 
+    <script src="{% static 'js/questions.js' %}"></script>
+    
+
+    <!-- En este archivo del java se pone las preguntas y opciones --> 
+    <script src="{% static 'js/facil.js' %}"></script>
+
+    <!-- En este archivo del java se pone las preguntas y opciones --> 
+    <script src="{% static 'js/dificil.js' %}"></script>
+
+    
+
+    <!-- Esta todo el codigo java de la trivia --> 
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
